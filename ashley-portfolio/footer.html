@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    body {
+      background: #121b25;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1; /* pushes footer to the bottom */
+    }
+
+    /* ===== Footer Section ===== */
+    footer.footer {
+      background: #1a242f;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      padding: 70px 8% 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    footer.footer::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: radial-gradient(circle at top, #1a242f 0%, transparent 70%);
+    }
+
+    .footer-content h3.logo {
+      font-size: 28px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-content p {
+      color: #d6d6d6;
+      font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 25px;
+      max-width: 260px;
+    }
+
+    .footer-content h4 {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+
+    .footer-content h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 35px;
+      height: 2px;
+      background: #f0a500;
+      border-radius: 2px;
+    }
+
+    .footer-content li a {
+      display: block;
+      color: #d6d6d6;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-content li a:hover {
+      color: #f0a500;
+      transform: translateX(5px);
+    }
+
+    /* ===== Social Icons ===== */
+    .icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icons a {
+      font-size: 24px;
+      color: #d6d6d6;
+      transition: all 0.3s ease;
+      background: #222f3d;
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    .icons a:hover {
+      color: #fff;
+      background: #f0a500;
+      transform: scale(1.1);
+    }
+
+    /* ===== Bottom Footer ===== */
+    .footer-bottom {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #b5b5b5;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      footer.footer {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 500px) {
+      footer.footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-content h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <!-- Content Example -->
+    <section style="padding: 100px; text-align:center;">
+      <h1>Welcome to the Page</h1>
+      <p>This is the main content area. The footer stays at the bottom of the screen.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3 class="logo">HYARKUNXIN</h3>
+      <p>Now you know how to use HTML, CSS, and JavaScript to create, style, and bring your web ideas to life.</p>
+
+      <div class="icons">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <h4>Projects</h4>
+      <li><a href="#">Houses</a></li>
+      <li><a href="#">Rooms</a></li>
+      <li><a href="#">Flats</a></li>
+      <li><a href="#">Apartments</a></li>
+    </div>
+
+    <div class="footer-content">
+      <h4>Company</h4>
+      <li><a href="#">How we work</a></li>
+      <li><a href="#">Capital</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Sellings</a></li>
+    </div>
+
+    <div class="footer-content">
+      <h4>Message Us</h4>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQs</a></li>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 HYARKUNXIN. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
